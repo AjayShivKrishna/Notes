@@ -1,0 +1,77 @@
+Alteryx is a powerful data integration and analytics platform:-
+
+Data Integration: Alteryx provides a comprehensive set of tools for data integration, allowing you to connect to various data sources, clean and 
+transform data, and combine multiple datasets easily. It supports both structured and un-structured data, enabling you to work with diverse data types.
+
+Workflow Automation: Alteryx enables you to create complex data workflows using a visual, drag-and-drop interface. This allows you to automate repetitive tasks and 
+streamline data processing, saving time and effort.
+
+You can perform statistical analysis, predictive modeling, spatial analysis, and more without writing complex code.
+__________________________________
+
+Canvas/ Workflow -->> is the place where you drag and drop your tools to create a workflow
+Run -->> to execute the workflow -->> Ctrl + R <<-- shortcut to Run.
+Configuration Pane -->> is the extreme left side where short information is given
+__________________________________
+Input data Tool --->>> Data set limit is 1 MB -->> here we just get partial data set, not full records
+Output file name as field -->> option to display the file name as a field in table -->> extreme right of the table you can find this
+Extension -->> .yxmd
+how to append multiple files at once -->> use * at the place of file name then RUN
+__________________________________
+Browse Tool --->>> Data set limit is greater than 1 MB -->> here we get all the records from the table. -->> Also here we get data profile at the 
+		   left hand side such as which city has the maximum num of records, which state is having max num of records etc.
+__________________________________
+Select Tool --->>> is used to include and exclude the fields from the data set as per the requirements.
+__________________________________
+Output Data Tool --->>> is used to export the data or result that you have prepared -->> select the tool then use the steps as you use while importing the 
+			data then give the file name and change the file extension if required -->> https://www.youtube.com/watch?v=XBD89-Z7LAI&list=PL6Omre3duO-OqL2T_jENSW1JLITQS8_nj&index=9
+__________________________________
+Directory Tool --->>> is used when we want to import the data from folder as well as sub folders -->> https://www.youtube.com/watch?v=KKd234gP7t8&list=PL6Omre3duO-OqL2T_jENSW1JLITQS8_nj&index=10
+ ---->>>> 2023* <<-- anything after 2023 and --->>> 2023*.* <<-- this .* means any file extension -->> https://www.youtube.com/watch?v=dKnd5fF8ASY&list=PL6Omre3duO-OqL2T_jENSW1JLITQS8_nj&index=11
+__________________________________
+Text input Tool --->>> is used when we want to enter data manually or copying from the excel or somewhere else and pasting here.
+__________________________________
+Date time now Tool --->>> is used to get the current date and time.
+__________________________________
+Data Cleaning Tool --->>>remore the null rows and columns as well as if we want to fill Null values with Blank or 0 then it can also be done // Leading and trainling spaces, duplicate, letters, punctuation and all
+__________________________________
+Filter Tool --->>> T = True | F = False -->> is used to filter out the data using basic filter and custom filter for instance I want to see Data where category is equals to furniture Then we can use the basic filter option (Altery is not case sensitive)
+		   you can just filter it out without creating a new column. However, You can create a new column alter applying the filter or formula in Foumula Tool (this is the difference between Fitler and Formula Tool)
+__________________________________
+Formula Tool --->>> Here you can create a new column after applying the formula.
+__________________________________
+Sample Tool --->>> is used to select top 10 rows last 20 rows etc.
+__________________________________
+Short Tool --->>> is used to short the data.
+__________________________________
+Join Tool --->>> is used to join the tables
+__________________________________
+Union Tool --->>> is used to append or union two or more tables.
+__________________________________
+Split to Column Tool --->>> is used to split first,middle and last name into columns also if you choose split to rows then it will split the column like
+		       cross apply in sql server
+__________________________________
+Summarize Tool --->>> is used to summarize the data like use or aggregate functions group them.
+__________________________________
+Record ID Tool --->>> is used to asign the row number in the dataset.
+__________________________________
+Unique Tool --->>> is used to divide the data into two parts one is unique and second is duplicates. select as per your requirement -->> please select unique
+__________________________________
+Imputation Tool --->>> is used to replace the NULL values or if you want to replace the null values by any purticular then you can do that as well.
+__________________________________
+Multi row formula --->>> is used to fill down the values from above row.
+__________________________________
+Multi Field formula --->>> is used to fill any value in multiple flieds at once.
+__________________________________
+Select Records Tool --->>> is used to select the records giving the range such as -->> 2-10 <<-- means start from second row till 10 / 3 <<-- this means only third row.
+__________________________________
+Find and Replace --->>> is as used as we do in SQL or Excel // here you need to create a new sheet within that excel file wherein you want to replace something then this second sheet need to 
+			be imported here from that sames file -->> then connect it with replace side (using find and replace table).
+__________________________________
+Cross Tab Tool --->>> is used to convert row into column / see the image of this Tool.
+__________________________________
+Transpose Tool --->>> here column are converted into rows and rows are converted into columns / prefer Image of this Tool.
+__________________________________
+Running Total Tool --->>> is used to display the commulative sales, profit etc.
+
+

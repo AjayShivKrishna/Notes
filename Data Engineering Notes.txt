@@ -1,0 +1,695 @@
+Data Engineer --->>> who moves the data from variety of sources into one common or central location (Data platform or data lakehouse) (all kinds of data, structured or non-structured)and 
+making it available for your organization // this is what data pipeline or aggregation called // so here we need to do migration, analytics or fixing the bugs and then monitoring.
+_________
+Data Pileline --->>> while moving the data from variety of sources you need to create a model like 1th step would be this, then 2th step would be this and so on (preparing the entire flow 
+		     of the data)
+_________
+Data Scientist --->>> after performing all the data engineering work, a data scientist comes to the picture wherein they do forecasting, prediction, creating models, training them etc.
+_________
+DevOps Engineer --->>> Who makes sure that the services never crash and all the frontend and backend developers write the code working properly.
+_________
+Data Analyst --->>> Using SQL (preparing the data as per the requirements), Power BI (Publishing it on Power BI or Tableau in order to represent the data in the form of visuals)
+_________
+Storage Account(ADLS) --->>> this is a kind of place wherein an engineer stores the data after extracting it from the multiple sources (this is what we have read above named as data 
+platform or data lakehouse)
+_________
+45 days - ADF (Azure data Factory) -->> All the pipelines related work is done in ADF (with zero coding) it is just drag and drop.
+
+45 days - ""Once we have the data available in ADLS we can take our steps ahead to do some analytsis, here Spark /  Databricks / Pyspark comes in picture (here SQL is 80% and python is 20%)""
+
+45 days - ""Once you know ADLS and ADF then 90% of the synapse(combination of ADLS and ADF) is used""
+_________
+Cloud Computing --->>> In my easy language -->> it is the online computer that you can access from across the world just having the internet connectivity. there are three common or 
+most popular cloud providers are -->> AWS -->> AZURE -->> GCP and around 150 to 200 services are provided by these cloud providers.
+
+**There are three type of cloud -->> Public Cloud (AWS,AZURE,GCP) -->> Private Cloud (Here private networks are created for company, Bank and all and every common person can't get 
+into) -->> hybid Cloud (Combination of public and private cloud, this may for bank and all)**
+_________
+Cloud:-
+
+Meaning -->> Cloud computing is the computer services such as storage, Databses, software and more, over the internet. instead of owning and maintaining them in our own computers
+
+Iaas -->> Infrastructure as a service -->> computer services like servers, storage and networking over the internet.
+	  Users can create configure and manage their own virtual machins (WMs) on the cloud provider's infrastructure. withoud inverting in their own hardware or manage their own IT Infrastructure
+
+PaaS -->> Platform as a Service -->> Provides the platform for developing, running and managing applications over the internet.
+	  Here users can develop and deploy their own applications on the cloud provider's infrastructure. the cloud provider provides the necessary hardware, operating system,
+	  while users are responsible for developing and managing their own applications. (Here you develop your own applications)
+
+SaaS -->> Software as a Service -->> is a type of cloud computing sevice that provides access to their users to software applications over the internet.
+
+Characteristics of cloud computing:-
+
+1. On-Demand self-Service: Cloud computing (Cloud computer) allows users to quickly and easily provision(supply) computing resources, such as servers, storage, and applications, 
+without requiring human intervention from the cloud provider.
+2. Broad network access: Cloud computing resources can be accessed from anywhere with an internet connection, using a wide variety of devices, including laptops, desktops, smartphones,
+ and tablets. This makes it easy for users to access resources from anywhere at any time.
+3. Resource pooling: Cloud computing allows multiple users to share computing resources, such as servers and storage, which can be dynamically allocate and re-allocate as needed
+4. Measured service: you only pay for what you use or reserve as you go.
+5. Rapid Elasticity: you can access more resources when you need them, and scale back when you don't.
+__________________________
+CSV, JSON, PARQUET format Files
+what is super computer
+what is event up
+what is cloud data
+apache air flow -->> in this everything is done writing the python code and ADF -->> in this you do not need to write the code.
+
+SPARK / PYSPARK -->> 50%
+ADF -->> 20 TO 30%
+SQL and all -->> 10 to 20%
+
+what is scala
+certification -->> DP-203
+______________________________________________
+****************************************************** 1th Class Finished ******************************************************
+
+
+AWS -->> S3
+GCP -->> Cloud Storage
+Azure -->> Storage Account
+________
+
+when we create any storage account, we have four types of services --->>> Blob storage ADLS -->> file Storage -->> Queues -->> Azure Tables:-
+
+1. Blob Storage (Binary large Object (One file means on Blob)) and ADLS -->> this is done today
+2. File Storage
+3. QUEUES
+4. Azure Tables
+
+***********************
+1. Subscription (this is nothing just a billing account, where azure will deduct the money from (people may have the multiple account like one 
+account for one Project second for second project -->> these accounts are created by a cloud administrator so you do not need to worry about)) and
+
+2. Resource Group (means what category, there may be operations data, sales data, customer data these are just examples (where the data will be saved))(is a kind of container which conatains all kind of data related to a particular project) and
+
+3. Storage account (ADLS) name (this is gonna be your storage account name so it must be unique, must not match with someone over the globe. I use any name here like order_anomaly (with this same name no one can 
+create their storage account name)) and
+
+4. Region (where you want your data to be saved in India, US, UK...)and
+
+5. Performance (how fast your data should be retrieved from the data source(premium is faster than standard)) -->> once everything is done go to the *Review tab to review your details 
+and then hit the crete option*
+
+
+Data storage option on the left side click on *Containers or Blog services then create a contaier (this is like computer C Drive E Drive... until or unless you have at least one container
+you won't be able to store something) --- >>> again the data engineer has only read and write access, not create and edit access*
+
+what is access Level -->> Private (this is like sharepoint, priavate means do you want to set this data as private so that everyone can't access it), Blob (This means public -->> everyone 
+can access using its link)
+
+
+In Encryption --->>> Privacy
+
+Questions -->> how can you secure your data in the storage account
+Ans. -->> there are two types of ecryptions in the storage account 1. At Rest and 2. At Transit 
+(when you upload your data from your machine to the storage account it is 
+called as Transit) // in the encryption option, you have two more option (1. Microsoft-manage key(MMK) here file is encrypted by mirosoft) 2. customer-managed key (CMK) (here if you want 
+to encrypt by your own then you have this option to encrypt data by own)
+
+
+In Networking --->>> Privacy
+
+these are the option which you can use for data privacy:-
+Enable public access from all network
+Enable public access from seleceted virtual network and IP Addresses
+Disable public access and use private access.
+_____________
+In basic --->> creating storage account
+
+Redundancy(used for backup the data from multiple places) level:-
+_____________
+in Advance -------->>>>
+
+Datalake storage Gen2:-
+when you create a storage account that becomes ADLS (azure datalake storage) account when you ckeck on below option --->>> if you do not ckeck on the below option then storage 
+account remain Blob account
+Enable Hierarchical Namestpace[]
+
+-->>Access tier --->>> if you select hot tier then the data will be retreived fast but the cost will be different
+-->> Cool tier --->>> the cost will be different
+
+Qes -->> what is the difference between ADLS and Blob account
+Ans. -->> in the ADLS you can create folder hierarchy whereas this functionality is not available in Blob account. most of the times, we use ADLS since it is specially created for big data
+	Analytics. whatever activities are done in SPARK, Databricks..., their data I should store in ADLS (it is develop for big data analytics and for performance) since 
+the performance is high or fast
+
+Que -->> can we create any folder in Blob account
+Ans -->> you can't create any folder in the Blob account, sometime people create folder there, but that is not an actual folder. there seems to be a folder but that is not...
+
+________________
+when we need to give the storage account access to someone else. there are two ways 
+1. access key (this is not a good practice to provide the access to someone to azure, since it provides full priviledges to access, delete etc. (not recommended))
+2. SAS Token -->> shared access signature -->> here you have the option to choose, what accesses you want to provide to someone, only for read or only for write or only for add or only for 
+update (you can define the time limit as well, how long should someone has the accesses) <<-- this is recommended
+
+
+
+
+____________
+
+
+we do not upload the data manually from our system to storage account <<-- there are some services. by which some jobs are scheduled and data get upload automatically. steps are below:-
+
+your database ->|DB|-->> |ADF services| --->>> |ADLS (storage account)|  <<-- automatic process  (this process can be done by coding or (rest API) as well) (spark or databricks to connect 
+to the storage account to read and write information)
+____________
+Access keys and SAS(shared access signature) Tockens are used to provide the storage account access to someone
+--->>> at the left hand side you can find these two options --->>> access keys (not recommended to provide someone becuase it give the entire permissions) -->> it provide all the access 
+read, write, edit, delete and all to someone who has storage account name and key <<-- this can be used while connecting with python, java and all.
+
+Question -->> why do we have two keys in access keys option
+SAS Tocken -->> recommendate -->> un-select the options or select the options you want and then at the bottom click on generate SAS tocken	
+_______________________________________________________
+_______________________________________________________
+
+file shares -->> service under storage account --->>> service or a drive that you can map with your computer and then whatever you save, download on your own laptop just selecting the 
+		file service (drive)location that will be saved at file service on azure
+this is the service through which multiple user can get connection to file shares service. the moment something is uploaded over file shares, everybody will be able to access this on 
+their computer. however, they just need to connect their (this PC) from file shares service (https://www.youtube.com/watch?v=KykxS6lD_aA) <<-- watch this video to understand
+
+Queues services -->> used to deliver the message to receiver
+
+
+table service -->> is using no sql. can contain huge amount of data, very fast, go to the option and start inserting the data.
+****************
+Access control (IAM)Identity access management -->> is used to provide the accesses to the azure account to team members
+---->>>> click on this -->> add -->> add role assignment (so you decide what accesses should be given to someone) -->> select any role then click on next -->> review + assign -->> select 
+	 member then select from the right hand side
+
+**************************************** New Topics are starting from the below ***************************************************
+
+Create Azure SQL database by searching it:-
+
+________________________________________________________________________________Azure Data Factory(ADF) creating data pipelines
+
+Work flows are created here <<-- wherein you move the data from source to the destination (ETL Process)
+On-Prem -->> when you have your own hardware, this is out of the cloud (when you have your own system to store the data and all is called On Prem)
+
+ADF -->> ETLC + More Powerfull : -
+
+data pipeline(integration rutime) -->> how data is moved from On-Prem DB to cloud|| --->>>SQL Server <<-->>connect(username,password,database name) it with cloud using linked 
+service <<-->> Create datasets(kind of bag which stores data, here data is coming from sql then it would be sql server type of datasets) <<-->> copy activity (used to copy the data from 
+one side to another side) <<-->> in which type you want to save your data *csv type dataset* <<-->> create another linked service to link this from ADLS or cloud to save the data in ADLS
+_______
+1.Linked Service --->>> how data is moved from On-Prem DB to cloud|| --->>>SQL Server <<-->>connect(username,password,database name) it with cloud using linked service
+2.Data Sets
+3.Activity
+4.Integration Runtime
+5.Pipeline
+_________
+
+create the Azure a data factory -->> search data factories
+--->>> you do not need to create muliple data factories because one factory can contain multiple datapipelines
+after creating it click on launch the data factory <<-- it will take you to the data factory studio to the another window
+
+create a On-Prem database -->> here we will create the azure sql database and configure it properly
+basic -->> configure
+networking -->> public endpoint and allow azure services and resources to access this server -->> yes
+additional setting -->> use existing data -->> sample
+
+
+-->> come to the data factory window, click on pipeline to create a new pipeline -->> options -->> Pulish all <<--- to save your workflow
+
+1. activities -->> search *copy data* and drag and drop it on canvas
+and come back to the database you created and click on query editor at the left hand side then put the user name and password to get into your database you created
+2. come to data factory click on manage at the left hand side option -->> new -->> create connections *one for azure database* and second for CSV,Json <<-- which you select here, your data will store in that format
+___________________
+I -->> Author -->> new Pipeline -->> Copy Data
+II -->> Manage -->> new -->> Azure sql database |<<-->>| data lake gen2  <<<--- for building the connections
+III -->> Author -->> Datasets -->> new Datasets -->> AzureDatabase |<<-->>| Azure data lake storage Gen2 <<<--- to send the data to destination
+IV -->> Author -->> configure Copy Data from down -->> Source -->> Source dataset -->> from where the data is to sent (select sql)|| -->> Sink -->> Sink dataset -->> where data is to save(select CSV) the at the top click on the data debug
+
+___________________________
+___________________________
+in data factory -->> come to datasets -->> new -->> search AZURE SQL -->> make connection -->> then second step -->> again click on new -->> search azure data lake storage(this just decide the format you want to get applied over your sql data which will transfer to ADLS account) -->> click on CSV -->> configure it and click on create (make sure you already have a container where you what to store this extracted data after executing)
+come to the pipeline option search copy data and then build the connetion then click on debug then you will see you have a table create in the located you select (in storage account window)
+___________________________
+___________________________
+
+if you want to pick the product table instead of customer table, you can do it from the drop down option going to datasets option <<--- but this is not the right way.
+
+
+**************************************** New Topic is starting from below ****************************************
+
+Dataset Parameterization ------>>>>>>
+
+create a new dataset -->> search -->> azure sql <<-- here do not select any table, just click on ok after (filling name and linked service)
+-->> go to parameters option -->> create two parameter 1 (schemaName), 2 (tableName)
+
+for Parameterizations <<--- see in the Images, for both SQL and CSV. and how to move, more than 1 tables to ADLS account
+
+****************************
+For each activity --->>> if we have 100 or 200 files than, in this case, we do not use the above method. instead of *copy data* option, we have *for each* method which moves 100 or 200 files at once, using loop.
+
+drop here for each activity
+settings, items, dynamic, functions, createarray then put all the tables name line ('cust','sales') then Okay
+click on Activities, drop -->> *copy data* 
+select the data source, while select the data click on dynamic seletion. futher at the right hand side one option will pop up just click on this then Okay and debug it
+
+****************************
+Lookup Activity -->> when we have records more than 1000 in a table then only copy the records from sql to ADLS (when we put a limit)
+		     Lookup Activity has a limit that it can't return more than 5000 records or 4 MB in size(that is why loopup is used to when some piece of information is required)
+--->>> Primarily lookup activity will give you first row only(if it is checked) -->> select *data source* then un-select *first row only* option to see the data upto 4 MB, as of now keep it as default -->> click on query (to count the num of records) -->> query (select count(*)as Totalcount from table_names)
+-->> Execute Pipeline -->> is used to execute multiple Pipelines at onece (which we have for Nested if, do rememnber)
+-->> when we run one Pipeline two or more times then it overwrite the data, if we do not want it to do it, we can create dynamic folder name under Sink option using the corrent date and time.
+Mapping Option -->> this you can find next to Sink option, wherein you can select the column names and rename the column names
+
+ForEach Activity -->> a kind of, for loop which runs again and again
+IF...else Activity -->> used to put if else condition
+
+Question -->> Assume that I have a folder in ADLS. Inside this folder, I have few more folders and few files. Now I want you to specifically copy only the files from this folder to some other location.
+
+
+
+
+
+
+
+
+
+--------------------------
+
+Parameterizatin can be done -->> 1. Dataset Parameter -->> 2. Linked Service Param. -->> 3. Pipeline Param -->> 4. Global Param.
+
+Key Vault -->> when we create linked service, there we can see this option -->> it is used when DB admin does not want to give you the password to the DB, if you are a new joiner.
+		then he will store the password into *Key Vault* and it will be accessed from, the moment you create the linked service.
+
+
+
+--->>> when we have records more than 1000 then only copy the customer data from DB to the ADLS location but <<-- this can be done easily
+if it is less than 1000 then copy the prodct table only
+
+
+1: Lookup -->> is used to write a sql query (select count(*)as total from table_name) <-- I wrote like this -->> to get short information
+2: if Condition -->> Activities(1) click on blank box -->> click on -->> data of the first row -->> formula is like -->> @greater(activity('Migration After Count').output.firstRow.Total_Count,1000)
+3: go to true condition -->> drag the *copy data* and CSV <<-- use the same process as we do in the normal situation.
+if true condition is false then copy the product data <<-- same process is here also just go to the false condition and copy the product data as we do usually.
+
+
+Question 1: -->> if SalesOrderDetail > 500 then copy the SalesOrderDetail -->> Nested -->> if SalesOrderHeader is > 300 then copy the SalesOrderHeader also
+Ans 1: this is done please see in the tool
+Question 2: -->> if I have two pipeline, Can I execute one pipeline from other pipeline
+Ans 2: Yes, we can execute one pipeline from other pipeline, to do this, we have *Execute Pipeline* tool through which you can perform this task easily. which is also used in Nested if conditions
+
+Recursion -->> to call one Pipeline by its self is call Recursion -->> is not allowed in this software
+Nested if...else -->> is not allowed in this
+
+LoopUP -->> for writing the queries or as we used for counting the rows from a table (is used to fetch some piece of information upto 4 MB(this is half truth -->> here you can delete, update, transform the data as well(but it is not recommendate here))))
+if...else -->> is used to perform the if else condition, as we used for, if records are greater than 1000, 500, etc.
+Execute Pipeline -->> is used to execute one Pipeline from other Pipelines
+
+
+Dynamic_folder_name -->> as we know how to create a folder in ADLS from data factory, but when we give the same name again and again it over-ride the folder(means it delete the previews folder) but in industries we do not do this
+			instead we create a dynamic folder or file which have the date and time after or before the table name
+
+Get MetaData -->> select this tool -->> in the setting, select the table from the ADLS account -->> click on new in *Field list* option -->> select the informations you want to see in the output.
+
+Key Vault -->> is used or created by database admin -->> when he does not want to give the password to access the database then they store the password into *Key Vauld* further this key can be access from, where you create the linked service.
+-->> after creating this, at the left hand side you find tree options 1. Key -->> 2. Secrets (here we create the password) -->> 3. Certicate.
+--> at the left hand side using the access policies you can give more permissions
+
+Question -->> how to create linked services -->> 1. creating Key Vault and setting up the password -->> 2. while creating the linked serivce at the bottom you option like Parameter, 
+	here you define the parameters for password and username then add these where you select the username and password on the same page and then while creating Pipeline it will ask you for username and password.
+
+
+Incremental Pipeline _________________________
+
+-->> Incremental Pipeline is created when we have the scenario like -->> suppose I loaded 100 customer data at 9:00 AM -->> again at 11:00 AM on the same day, I want to load the data, 
+because 10 new more customers are added <<-- if I run this Pipeline again, this will load 110 customer's data, which is not a good way --->>> that's why we create a Pipeline that load only 
+new customer's data --->>> this is known as **Incremental Pipeline.**
+
+how To know, your Pipeline was last executed -->> to know this, keep a date time column in your data;
+-->> HighWaterMark concept or Methodelogy -->> to keep the date and time of execution of Pipeline
+
+-->> How to Truncate a table before inderting the records into
+Ans. -->> Pre-Copy Script Option under Sink Option <<-- only when you have selected SQL DB
+
+-->> Debug Point
+Ans. Debug Point is the Circle upon every activity, the moment you click on it, this will only be enable, rest of the activities will become disable.
+	(used to check the data at each step every usefull)
+
+
+***************** ADF and Spark  (most important)********************* We are going do Transformation here, through Data Flow, which is costly
+
+Data Flow or Spark -->> Has no Code or has low code
+-->> Data Flow create the Spark Cluster
+-->> when we have SQL DB as a Data Source then, here We can do Transformtion in the copy activity(writing the sql query). however, when we have file as a data source then we have only option to perform the transformation activity, is Data Flow.
+
+-->> Data Flow Intro:-
+Source Setting-->>
+1. Source Type -->> Dataset(this is what we have created for far, sql linked tables or files from ADLS location(location dataset which is available everywhere)) and 
+2. inline -->>(this is same as dataset. however, here create new linked services which will only be avaible here, not outside of this data flow)
+
+Source Options -->>
+Query option -->> select the query option and start writing your sql query for transformation.
+Stored Procedure -->> select stored procedure and start preparing your stored procedure.
+
+Projection -->>
+it has all the columns name and their Data type if you want to change the data type then you can use 
+overwrite schema option -->> to change the schema of a column
+
+Inspect -->>
+this is also representing the data type of columns we have. however, here you only can see the data type, you can't change them(this you can consider as after execution what data type I have)
+
+Data Preview -->> is the place where you see your data after executing it (this is output window)
+
+***when you choose inline option the option are as similar as we have in copy activity***
+
+-->>Derive Column -->> when you want to add one more column into your existing tables
+-->> join
+-->> Filter
+-->> Select Columns
+
+
+***************** SCD Types (Slowly Changing Dimension) Very Important*********************
+
+there are four types of SCD -->> see in the Image
+
+1. update SQL data using ADLS table -->> copy activity -->> Source - ADLS Table by which sql table has to be udpated -->> Sink -->> select SQL table -->> choose Upsert option under Sink Step.
+-->> this will update the entire SQL table -->> if I have 5 rows in sql table and I want to update two of them then I will use this activity which will insert new records in the sql table as per common Identifier (Key)
+-->> this is SCD_1 <<-- see this in the image 
+-->>( this can be done within ADLS SQL, just writing the update query)
+
+2. Lookup1 in Data Flow -->> is used to check whether one table's data exist in 
+
+
+
+
+***************** New Topics Below *********************
+
+REST API -->> https://restcountries.com/#endpoint-all
+
+
+Developer or Full Stack Develop guys create these services, we just use it:-
+
+Question -->> somebody can say that, this is the REST API data source and you have to pull the data from it 
+Ans. -->>(you can ask 1. (sir, what is the END POIN (URL)) 2. Method Request -->> what method request should i use POST OR GET)
+1. Get Request -->> in the URL, user_name and Password is visible, if someone is standing before, might see that user_name and password
+
+-- End Point -->> this is nothing just a URL or Server name or REST API URL (server) <<-- with URL you will use your user name and Password to get connected with any URL
+99% of the time you need to use your user name and password and sometime you don't
+
+End Point == URL
+(API is the URL where you extract the data from by inserting your user_name and password)
+Json -->> most of the time we get the data in the form of Json from REST API
+
+-->> use of REST API (costly) -->> when someone does not want to provide the access to their entire database, then they create End Point(URL (REST API)) which will go to their database and fetch
+			 only that information on which they created it (Ex. they created Customer information URL, so if someone wants customer's information. instead providing him the entire access
+to their database, they will provide him the End point they created for customer's information --> this End point will go to their database and will provide him only customer's information)
+
+--->>> Connect ADF with any REST API -->> Copy Activity -->> Source -->> create new linked service searching REST -->> select Anonymous option <<-- in case you do not have any user_name and password
+
+
+-->> Base_and_Relative URL -->> https://restcountries.com/v3.1/name/{name} -->> till name, my URL would remain same which is known as base URL -->> {name} <<-- here I can put any Country name
+for which I want to see the data, which is known as Relative URL -->> for Relative URL we can create parameters in the Linked service under while selecting the REST -->> see below
+
+					https://restcountries.com/v3.1/name/India <<---->> https://restcountries.com/v3.1/name/America
+
+Web Services -->>
+Rest API -->> is used to get the data using URL, choose the copy activity -->> create a linked service searching REST then select it put the URL, if you do not have the user_name and password then choose anonymouse instead of basic then okay -->> then same steps we do
+Soap Services -->>
+_______________________________________________________________________________
+-->> if any activity get fails then I want it to send me an email. however, I can't be done in ADF -->> for this, we have *logic apps* <<-- this can be created in Azure not in ADF
+     After creating it, go to the logic app designer at left hand side to create the workflow (used for triggling any workflow or Scheduling jobs)
+
+-->> logic app designer -->> HTTP -->> Search -->> Outlook.com -->> Search -->> send and Email(02) -->> connect to your email ID through which you want to send an Email -->> at the top, click on Save -->> as well as -->> click on *when a HTTP Request is revieved* -->> you will get a POST URL -->> Copy this POST URL
+     come back to your Pipeline -->> drag and drop Web Activity -->> setting -->> URL <<-- put here copied URL -->> Method <<-- select POST -->> Body <<-- only put curly bracket like {} -->> this is done. so once any activity is completed the Email will be sent
+-->> the above is statis, here we can create dynamic as well -->> this is done please see in the snips. below is the json format used for dynamic emails
+
+{"Pipeline_Name": "Name",
+"Status": "True",
+"Recipient_Name": "Name@mail.com"}
+
+this is an interview question so please prepare the answer as we did
+_______________________________________________________________________________
+
+Question. how to set web if any activity get fails in between --->>
+
+
+Answer. -->> on every step if any single activity get fails then we can use Web activity. however, it is not suitable to use multiple time in a signle pipeline. for this, we have another method:-
+
+come to Monitor tab at the left hand side in ADF just below the pencil icon -->> Option -->> Alters & metrics <<-- last option from left -->> New Alert rule -->> add 
+criteria -->> choose -->> Failed Pipeline runs metrics -->> in Name, select -->> Pipeline Name -->> Failure Type -->> select all, would be good -->> in the Alert Logic option 
+means that -->> if number of failed pipeline is greater than 0 then I am getting this alert -->> Evaluate based on option means -->> timing that how many activity got failed over a 
+last hour -->> then Okay -->> Configure Notification option --> action group name <<-- who will get take care on it, you can give any name here so that you remember who is working on it -->> same page itself we have add notification option -->> where we can 
+add mail ids, whom it should notify
+
+-->> Delete Activity
+
+***************************************************** New Class Starting from below *****************************************************
+
+Triggers -->> triggers is the machanigm to schedule the pipelines and  get them executed automatically
+
+-->> click on trigger on pipeline window -->> type == schedule -->> start date (means since when it should become effective) -->> time zone (according to which time zone it should be triggered) -->> Recurrence (how frequent it should be triggered)
+     once this is created do not forget to publish it --->>> associate the trigger with the pipeline -->> open the pipeline, at the top click on trigger -->> click on add trigger -->> Publish it again as well.
+-->> how trigger can be used for multiple pipelines **
+
+-->> how to check the history of any pipeline execution <<<--- see in the image
+
+-->> Storage Event Trigger -->> it does not wait for a spacific time to come, to be triggered as we do not set any time here. it trigger the file, the moment any file comes to a spacific location.
+Ex. -->> any file comes to a ADLS location -->> storage event trigger will be executed (it does not have the frequency to be executed, any file comes it start triggering it) -->> by going to the ADF then -->> load it in SQL DB or any other location.
+
+-->> creating storage event trigger -->> in the type select -->> Storage Event -->> Storage account name <<-- here select your ADLS storage account name which you want to get it be 
+triggered --> select the ADLS Container name -->> Blob path begins with <<-- here, select the folder name, in which al the files you want to get it be triggered -->> Blob path ends 
+with <-- here, select the extension, in which files you are intrested like (.csv) or you may live it empty as well -->> Event -->> 1.Blob created (if any file is inserted in the 
+folder then you want to trigger it) or 2.Blob Deleted (when any file is deleted then you want to trigger it ) -->> ignore empty Blob <<-- means (if any empty file is inserted ot 
+deleted, then even you want me to be triggered) -->> star trigger <<-- click on it  <<<<----- see this in snip
+
+-->> for a Pipeline you should use two trigger (in my opion) 1. simple trigger by setting up the time, every 1 hour, every 2 hours etc. 2. storage event trigger, suppose I have set up one simple
+     trigger which runs on every 2 hours. however, if any new file is loaded to the ADLS below completing 2 hours then I want it to be executed.
+
+-->> all above two triggers just hit the run buttom and come back to their place, they do not care whether pipeline executed successfully or not and for one trigger many pipelines can we triggered. if I set up trigger to run on every 1 hour, but in same it started running on 10:00 and it is keep on running, now secod hour started 11:00, this is also started running and keep on running, only run pipeline is running for 2 times, if it happens for next hour....
+    in this situation we have another trigger -->>>>>
+
+-->> trumbling trigger(can be used with only one pipeline, frequency can be less than 5 minutes) -->> here, if any pipeline executed, it keeps track of it, whether this is executed successfully or not, if not than -->> you can set the limit on *Retry policy: count* <<-- means if pipeline is not executed then till how many time it should run
+-->> Max concurrency -->> if the same pipeline is executing for last 2 hours and keep on running then we can set the limit that -->> if another hour star for the same pipeline then it 
+     should not run till the last execution doesn't get completed -->> Ex. pipeline -one has the frequency to run on every 1 hour -->> it started on 10:00, 11:00,12:00 <<-- somehow first 
+     execution was not complete on 11, after 1 hour it again started running on 11, now two are running -->> now I want nevertheless, I do not get previews two execution done, till, do 
+     not run pipeline for the next hour.
+
+-->> Global Parameter -->> as same as we create while we select the source in copy activity, but this global parameter is accessible across the ADF -->> Monitor -->> left hand side *Global Parameter* <<-- create it as we create for saleslt.customer -->> and use it normaly.
+
+
+***************************************************** New Class Starting from below  DevOps team's work *****************************************************
+
+one ADF account is not used by only one person, there might be other team's member using it
+
+GIT Hub and GIT -->> these are the version control system -->> suppose other team's members are also working on the same ADF, on which you are working too. you made a pipeline and someone changed 
+something in this because he/she jealous of you. in this situation you can keep track of your Pipeline, for instance, when it was working fine, then what changes were made, 
+(same like Power BI we have in transform data option)
+
+CI/CD Pipeline and Data Pipeline, both are different
+
+CI/CD Approach (DevOps)
+
+
+DevOps -->> Dev == Development and Ops == Operations -->> means how you manage your development operations, Git and Azure DevOps is similar, if somebuddy is creating any link or other 
+things in your team, then how would they share with you, so they can share it on azure wich can be accessible for everyone <<-- for this you 
+need to configure your Git account in ADF -->> go to manage tab at the left hand side in ADF -->> click on Git Configuration <<-- for this you must have created an 
+azure account -->> whatever the option you see in the Git configuration, those steps must have been completed in azure DevOps (like creating new project, new branch under Repo etc. in azure)
+
+-->> whatever you create in ADF (Pipeline, data flow etc.), Azure create a code name as *AMR Code* -->> ARM Code comes in *Publish Branch* in under Git configuration
+     click on import existing resources option under Git configuration -->> means whatever new things are created in ADF that will be added into AMR CODE -->> after configuration you will see all your ADF Pipelines, data flow ect.
+
+
+Question -->> how collaboration happens with you team's memeber?
+Ans -->> on Git (Azure DevOps) we collaborate each other .
+
+Question -->> how your ARM code goes to the production
+Ans. -->> there was a DevOps team who created some DevOps pipeline to taking our ARM code to the production location (in another ADF)
+
+Question -->> How CI/CD works, have you idea about DevOps things
+Question -->> how to remove duplicates, Null values, Blank values etc.
+
+
+
+***************************************************** New Class Starting from below *****************************************************
+
+IR -->> Integretion Runtime -->> it is the power house, which provides the computation power to your Data Factory to run properly (by default when you create a ADF account you get 
+one IR which is called as *Auto Resolve IR* (this is default) provided *Azure IR* ) it can't connect be connected with private network <<-- every linked service uses the IR
+-->> there are 4 types of IR:- 1. Azure IR 2. Selfhosted IR and Linked self-Hosted IR 3. SSIS IR 4. Airflow IR (very New)
+
+-->> IR -->> is the software, which needs to be installed on your machine(computer), and it takes the power (RAM,Processor etc.) from your machine and runs fast and slow as per your machine capacity
+Question --> how all activities runs or works. <<-- Ans -->> above information is out Answer.
+Question -->> how IR decide where to take the computation power, when we use Auto Resolve IR (Default) -->> Ans. see in the image
+
+Question -->> tell me that if, I have data on-prem location and I want to my data from on-prem location to cloud location(ADLS account), how can it be done? -->> 
+Ans -->> when we try to get the data from on-prem location(private machine) to ADLS account, it doesn't allow us because private network (from our laptop) has the firewall which doesn't 
+let it take the data, resolve this we install the IR on our private machine then -->> ADLS cloud go to our private machine-->> connect with IR(which we installed on our private laptop) 
+the this, our machine IR go to the database to fetch the data <<-- this way data can be accessible  --------------->>>>>>>>>>>>>>>>> after insalling IR on your private machine it will 
+ask for a key, which you need to take from *Self-Hosted IR* on ADF <<-- you will get it from, when you were creating *self-hosted IR*, just copy the key and paste it.
+
+-->> while create any data flow the you have only one option that is -->> Auto Resolve IR
+
+*Auto Resolve IR* ( Type -->>*Azure IR*) -->> it takes the computation power from where your ADF or ADLS are location -->> however, when these locations are fully occupied then it decide 
+the location by itself to take the compution power, which might be different from where my ADF or ADLS are location <<<--- this can be th compliance in case, you do not want to moove your
+ data from one location to another location  by letting it decide to choose the location from where to take the computation power
+
+-->> you can create these by your self by defining only one location -->> Manage -->> Integration RunTime -->> new -->> After comfiguring it -->> when you select the linked service while creating any pipeline of any data flow, choose this, which you created
+
+-->> install integration RunTime on your machine -->> https://www.microsoft.com/en-us/download/details.aspx?id=39717
+
+3. SSIS IR -->> when you moove your SSIS packages from on-prem location to cloud location
+
+
+3. Linked self-Hosted IR --->>> if other team wants to use the self hosted IR to connect with the on-prem location (this is same, with which I am connected) so they do not need to create another 
+self hosted IR, rather, if you wan to connect with the same SQL server with wich I am connect, I can share it with them, how -->> go to the location where you created the self 
+hosted IR -->> click on this, then there is a option names -->> sharing -->> just copy the link and paste it in *linked self hosted* IR -->> Next -->> go back there, is another option to grant 
+the permission to a perticular ADF <<-- complete it 
+
+
+
+
+
+***************************************************** New Class Starting from below *****************************************************
+We have Parameters on three levels :-
+
+1. Pipiline Parameterization -->> click on create new pipeline, at the bottom, you find Parameter option, wherein you can define arry of table name or folder name of ADLS location where you want to 
+   save your data, once the parameters are defined, it can be accessible across the Pipeline ( in 2.Dataset option in 3.linked service option), you just need to call them while creating the pipeline (copy activity, if activity etc.)
+-->> beside the Parameter option, we have Variable -->> used for similar purposes, however, in variable you can change its value (but you have to drag and drop the additional tool name as 
+set variable, just put it where you want to change the value), in Parameter you can't change the value of it at any point of step.
+
+-->> Pipeline Optimization -->> if the pipeline is running for 5 to 6 hours and keep on running, since I have large volume of data, and as per the cloud, the long time your activity takes 
+     the cost will be, here, optimization is very usefull.
+1. Copy Activity takes long time after debugging the pipeline <-- so this should be optimized -->> click on click activity -->> click on setting under copy activity -->> option is *Maximum 
+data integration unit (DIU)* has the power to run you pipeline fast -->> if you select 4 then it would work as per its power, if you think, your pipeline is taking much time then select the greater than 4, as you create it, it will incease your cost,
+which gives more power to your copy activity
+
+2. Degree of copy Parallelism -->> under the settings -->> by default it is not set up on any number, but you can set it up to optimize the pipeline and redure the timing
+3. Data consistency verification -->> here verification is done while debugging the pipeline, in verification it may take time so if somebody is enabled it do it disable, this might reduse the time
+4. Fault tolerance -->> if copy the data from one location to another location and somehow any one or two rows are not inserted properly then it will stop the pipeline <<-- ignoring one 
+or two rows like (skip the incompetable rows,skip missing files, skip invalid number etc.) and letting the pipeline to be executed after this, you can select the options under the drop 
+down <-- then it will ask for loggin settings -->> means whatever rows would be read, then where do you want to save all of them -->> put any ADLS location -->> Logging Level -->> select 
+Warning, means wherein I am getting errors --->> another option is *Enable Stagging* -->> this get the data from one location and carry to another location which we do not set up and from 
+this middle location data from loaded to destination.  <<-- not much necessary
+
+** before the above oprimization options, you first need to know which activity is taking how much time <<-- for this go to the monitor tab -->> click on 
+triggered option -->> select the last couple of days like last 1 week, last 30 days etc. -->> then click on any pipeline you want to see -->> then you see every step has their time of 
+execution -->> time is in Duration option** <<-- from this window you can your you pipeline from the begining, selected activity, or only run the failed activity
+
+
+
+
+
+
+_____________________________________________________Data_Factory_Finish_____________________________________________________ from below Databricks,Spark and Pyspark
+
+SQL,SAS... ared used for structured data, but when it comes for deal with un-structure and semi-structured data at that time Hadoop comes in the picture -->> However, Nowadays hadoop is replaced
+by Spark
+-->> CSV, JSON, XML etc. files are semi-structured data
+
+while working with big data, it is difficult to analyze the data with a single machine so we distribute the data on different different systems, which is know as distributed computing and 
+these different different systems are called clusters (I devide my tasks among my team members and (this is called custer, set of machine collected togather))-->>(hadoop and spark are nothing just an example of distributed computing) 
+-->> each machine in the cluster is called Node  --->> I have 4 Node Cluster, means there are 4 machines in one group or cluster
+
+-->> see the Hadoop's Diagram in the image or in note book
+
+*Intro to Hadoop is finished here*
+
+_____________________________________________________ Spark Intro _____________________________________________________
+
+Question. why Spark
+Ans. -->> Spark is more powerfull and faster than Hadoop upto 10 to 100%
+2.-->> Ease of writing the code than Hadoop
+3. Machine learning modules whereas we do not have this in hadoop
+_____________
+-->> Spark is written in Scala language. additionally -->> Spark code can be written in Scala, Python, R, Java
+-->> Spark and Pyspark, both are similar in writing the code
+-->> Pyspark can be written in Python after getting the modules imported in python
+-->> Databricks -->> is a company which has developed a tool as Databricks wich only focuses on Spark activities (or you can say Databricks has increased the power of existing Spark)
+
+Databricks options:-
+
+1. Workspace has two options (Shared -->> (whatever team's members shares something will be visible here) and Users -->> (you can see here all your team's members who has the access to 
+this Databricks and the moment you click on your ID you see whatever you have done and if you right click on your ID you will see create (Notebook, library, Folder, Files and all), 
+import, copy link address etc, option))
+
+-->> create a Notebook, wherein you write your code whether this is SQL,R,Python or Scala
+-->> clusters needs to be created as they are used to provide the computation power to run our code or activities -->> to create it you have to pay money -->> from the left hand side click on compute and create clusters
+-->> after creating your cluster come back to your Notebook and connect with your Cluster
+-->> Recent option at the left hand side -->> will take you to your recent work
+
+-->> for Analyzing the data you need to import some data -->> at the left hand side click on Data -->> click on DBFS (databricks file system) -->> then Upload
+
+
+Question -->> what is inferSchema in Spark?
+Ans -->> it goes to the table and detect the most appropriate Schema of a table by itself
+-->> Inferschema slow down your work of job how -->> inferSchema goes to every column and start from the first row and goes till bottom to scan each and every value to decide what could 
+be the most appropriate data type, suppose we have  100, 200 GB's of data then obviously it will take.
+-->> if your data types keep on changing then this is the best practice to use it, but avoid it, if you have large volumn of dataset
+query to display the data in databricks:-
+
+df = spark.read.csv("/FileStore/Student_Table.csv",header = True, inferSchema= True)
+df.show()
+
+if your dataset is pipe separator then you can use sep = '|' at the end  -->> df = spark.read.csv("/FileStore/Student_Table.csv",header = True, inferSchema= True, sep = '|')
+
+-->> while converting the data type of any column's, if spark is not allowing to convert it, then it should throw an error, but doesn't, and replace the value the null
+
+-->> SQL or any other database --->>> ADF --->>> ADLS --->>> Databricks (to do the manipulation on ADLS Data or Analytics) --->>> after manipulation save the data into Databricks or save it back to 
+the ADLS location --->>> further access this data from Power BI, Tableau to create the inractive Dashborads to represent the data
+
+-->> when you save you table in databricks that is saved in Delta take format(default format) (in delta format you can update the data, however, this is in other format which you can't update it)
+
+-->> Nodes are represented by RDD(Resiliant distributed dataset) and RDD is represented by DataFrame in Pyspark
+
+-->> Interview --->>> Meta Store (meta data, data about data) -->> is a kind of database, installed while installing the Spark on our system, which stores data about your tables and databases(schema of tables, sctucture of database or tables etc.)
+     this can be changed.
+
+-->> Managed Table -->> if you delete the table, data will get deleted <<-- managed by you, or you have permission to to delete it  <<-- Interview Questions
+-->> External Table -->> if you delete the table, data will not get deleted <<-- when you do not have the permission to perform any delete activity <<-- Interview Questions
+
+describe table extended Table_Name <<-- this is the command to display the metadata of table where you can find, whether the table is mananged table of external table
+
+-->> writeData <<-- saving the data -->> we have two methods to save data 1. --> File form (in csv,Json,parquet etc.) 2. -->> in the table form (two methods -->> Manage table and External Table)
+
+-->> if you deleted the table from recent tab, then still you have that file in external location <<-- Table is deleted, but file is available in external
+
+-->> Spark SQL -->> when we use spark sql, then all our table creation, database creation informations are stored in Meta Store(is a derby database which store schema information, datatype information, name of the table etc. (storing in small size))
+
+-->> what are the magic commands in databricks --->>> Ans -->> %sql , %python , %scala ,  fs , %Run , %R -->> this only needs be written only at top of every cell
+
+-->> Database -->> ADLS -->> Database -->> againg back to ADLS <<-- this process is called mounting concept and Datalake Architecture. (Community cluster is needed to get connection between ADLS and Databricks)
+
+-->> Question -->> how to create mountain, or what is mountain?
+-->> Answer. -->> when we create the connection between azure and databricks then this activity is known as mountain creating
+______________
+______________
+connection can can be built with this code:-
+
+dbutils.fs.mount(
+    source='wasbs://<container_Name>@<ADLS_Account_Name>.blob.core.windows.net',
+    mount_point='/mnt/container/ADLS',
+    extra_configs={
+        'fs.azure.sas.<Container_Name>.<ADLS_Account_Name>.blob.core.windows.net': '<SAS Token>'
+    }
+)
+______________ below code is to display all folders, that we have in the container
+
+%fs
+
+ls /mnt/container/ADLS
+___________________________below code is to same the data in ADLS location
+
+T = spark.read.csv("/mnt/container/ADLS/New_Folder_Name/store_Data.csv",header=True)
+T.display()
+_________________
+_________________
+
+the data can be pulled using the below method:-
+
+-->> Application Registration <<-- whichever, application you want to use, first, you need to create a application registration
+-->> in Azure -->> search for *active directory* -->> at the left hand side *app Registration* -->> New Registration -->> give any name -->> go to 
+*certificates and secrates* (to give the password as new app registraction does not have the password yet) -->> at the left have side come to ( Certifications 
+and Secrets -->> New -->> put description you want to put then Okay)-->> below you will see Secret ID and Value (you have to copy the Value, and paste it on notepad. only, 
+okay) -->> come to Home then any ADLS which you are trying to connected -->> at top click o add then select *Add Role* -->> search for blob contributor access click on Next and in members tab search the registered_Directory
+
+
+
+
+
+
+
+
+
+

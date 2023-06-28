@@ -1,0 +1,210 @@
+Types of Databases in SQL:-
+
+No SQL -->> has no structure, data type are not specific, does not contain primary key and foreign key, you can't relate one table to another
+	    insert the data once, and retreive it many times, very fast, for OLAP
+SQL -->> structured data, data types, primary key and foreign keys, OLTP
+
+_________________________________________
+Delete --->>>  is used to selectively remove specific rows based on conditions without affecting the table's structure.(delete from table_name where ....)
+Drop --->>>  Drop command is used to remove an entire database object, such as table, view, index or store procedure (drop table table_name)
+Truncate --->>>  used to remove all rows from a table while keeping its structure -->> it is more efficient than the delete command when you want to delete all 
+		rows from a table
+_________________________________________
+Database and Warehouse //A database and a data warehouse are both data storage systems:-
+
+Database :- It focuses on managing and storing structured data efficiently.//Databases store structured data, which is organized in 
+tables with predefined schema and relationships. They enforce data integrity through constraints, such as primary keys, foreign keys, and data types.
+Databases primarily store current and historical transactional data, focusing on the latest state of the data.
+
+
+Data Warehouse :- Its main purpose is to consolidate and integrate data from various sources to provide a unified view for reporting. // Data warehouses can 
+store structured, semi-structured, and unstructured data. They are typically designed to handle large volumes of data and 
+accommodate complex data models, including star schemas or snowflake schemas, to support multidimensional analysis.
+Data warehouses store historical data over an extended period. They capture and store data from various time period, enabling trend analysis, historical comparisons, and forecasting.
+
+--- Data warehouse is the collection of data from small small databases -->> basically we have two types of information in this:-
+Operational Data -->> Day To Day activity's data such as -->> employee coming late then their salary should be cut/ someone has ordered something that product should be delivered etc.
+Strategic information -->> this is used to prepare the stragegies to boom the market such as -->> reason behind sales is going down/ where demand is low/ which product is sold in which season / 
+this data is used for decisison making / forecasting etc.
+_______________________________________________________________________
+Indexes -->>  Indexes help speed up query execution by providing a quick lookup mechanism. They allow the database engine to retrieve data more efficiently, 
+reducing the need to scan the entire table.
+
+there are three types of indexes in SQL server:-
+
+Cluster Index --->>> Each table has only one clustered index because data rows can only be sorted in one order // Node is the concept used by cluster index
+Non-cluster Index --->>> A table may have one or more non clustered and it does not sort the data in any order // the index is somewhere and data is 
+somewhere, also non-clustered is get the data from clustered index regardless creating the clustered index
+unique Index ---->>> if you want the index column should not have the duplicates then you can use this index
+
+this is in the technical term, if I talk in general. Indexes creates the interval at the backend and the number you search output you get
+
+how to find we need to use index:--->>> first find out the the column in the table that is making your query slow then use the index on those columns
+__________________________________________________________________
+
+What is data mining:--
+
+
+
+Data mining refers to the process of extracting useful and actionable information or patterns from large datasets. It involves using various techniques and 
+algorithms to discover meaningful insights, correlation, and trend within the data. The goal of data mining is to uncover hidden patterns and relationships 
+that can be used for decision-making, prediction, and knowledge discovery.
+
+Data mining typically involves the following steps:
+
+Data Collection: Gathering relevant data from various sources, such as databases, data warehouses, websites, or other data repositories.
+
+Data Cleaning: Preprocessing the data to handle missing values, remove noise, and eliminate inconsistencies or errors.
+
+Data Integration: Combining multiple datasets into a single, unified dataset, often from different sources or formats.
+
+Data Transformation: Converting the data into a suitable format for analysis. This may involve normalization, aggregation, or other transformations to enhance the 
+quality and usefulness of the data.
+
+Data Mining Techniques: Applying various algorithms and statistical methods to the prepared data to identify patterns and relationships. These techniques can 
+include classification, regression, clustering, association rule mining, and more
+__________________________________________________________
+what is DBMS and RDBMS :- 
+
+DBMS -->> we use to create database, to store data, to manage data and when it comes to store databases, we have multiple ways such as in the form of table, graph, tree, document etc.
+	  but when we store DB in the form of table then it is called as RDBMS
+
+
+RDBMS -->> data is organized into tables with rows and columns and relationships between tables are established using keys (primary and foreign keys).
+	   designed to handle large amounts of data efficiently and provide optimized query execution and data is stored in tabaular form.(Oracle, MS SQL, my SQL,
+	   PostgreSQL)
+
+DBMS -->>  DBMS may or may not have predefined relationships, and data is stored in file form like text file in notepad ( MongoDB, Apache)
+________________________________________________________________________
+
+
+Data Model :- the database is the collection of inter-related data // Data -->> Relationship among them -->> and constraints // then design the database at 
+	      physical, logical and view level
+Data modeling:- is the process of creating a visual representation of either a whole information system or parts of it to communicate connections between data 
+		points and structures. The goal is to illustrate the types of data used and stored within the system, the relationships among these data types, 
+		the ways the data can be grouped and organized and its formats and attributes.
+
+
+
+
+________________________________________________________________________
+Normalization of database:- Normalization is a technique wherein we desgin a table in a standard form to avoid the redundancy (duplicate records or useless data) 
+while inserting, updating and delete something from the data. //  in simple terms --->>> Normalization divides large tables into smaller tables and link them 
+using relationships. (Primary key and Foreign Key)
+
+1NF -->> make sure each column should not have multiple values in a sigle row (each column should have the atomic (single unit) value) and each value should be unique
+2NF -->>  it should be in the first normal form // All non key attributes(which are not the part of key column) are fully dependent on the primary key.
+	  here we can divide the table into smaller tables as per th understanding (after dividing the table into smaller part, further values should not be duplicate)
+3NF -->> there should not be transitive functional dependency in table (for exaple pin_code and city both are correlated if pin_code is changed then city name should also be changed)
+	 doing it you can divide this table into smaller parts as per your understanding.
+_______________________________________________________________________
+
+
+1. Data Definition Language (DDL)-->> CREATE, ALTER, DROP AND TRUNCATE -->> it permanently save all the changes in the database.
+
+2. Data Manipulation Language (DML)-->> INSERT, UPDATE AND DELETE -->>  it can't permanently save all the changes in the database. They can be rollback.
+
+3. Data Control Language (DCL)-->> GRANT AND REVOKE -->> DCL commands are used to grant and take back authority from any database user.
+
+4. Transaction Control Language (TCL)-->> COMMIT, ROLLBACK AND SAVEPOINT -->> TCL commands can only use with DML commands like INSERT, DELETE and UPDATE only
+
+UPDATE TABLE_NAME SET LAST_NAME = 'HELL' WHERE EMP_ID = 02; COMMIT;  <<----- FIRST SYNTAX 
+UPDATE TABLE_NAME SET LAST_NAME = 'HELL' WHERE EMP_ID = 02; ROLLBACK; <<---- FOR ROLLING BACK THE UPDATE COMMAND YOU ECXECUTED WITH COMMIT
+
+
+5. Data Query Language (DQL)-->> DQL is used to fetch the data from the database (ONLY SELECT STATEMENT).
+________________________________________________________________________
+
+JOINS -->> there are two types of joins
+
+1. Inner Join -->> all there records which are matching in both the tables
+2. Outer Join -->> Left Outer, Right Outer, Full Outer Join
+
+there are some other types of joins such as Self Join, Cross Join. (here self Join follows the left and right outer join's properties)
+Left Anti -->> Left table's records which are not matching from the right table
+Right Anti -->> Right table's records which are not matching from the Left table
+_________________________________________________________________________
+
+view is a virtual or we can this is a snapshot of one or multiple tables and having the physical existance in the database // 
+purpose -->> for manupulation or performing any task that can harm real data.
+_________________________________________________________________________
+MERGE STATEMENT:- is used to refresh the target table from the source table // instead of doing this we have a simple way to form this task that is -->> copying the 
+		  entire table and insert it into target table (https://www.youtube.com/watch?v=7WGYDnrlMps)
+_________________________________________________________________________
+
+Functions:-
+
+Cross Apply -->> select * from table_name value cross apply string_split (product_name,'-')
+
+Data -->> A kind of knowledge but in the form of rows and columns
+Databae -->> where data is stored a kind of memory
+DBMS -->> a system that manage the databases such as MS SQL SERVER, MYSQL...
+Alter table table_name alter column emp_id nvarchar(10) primary key
+
+Exec sp_help table_name <<-- display the schema of a table
+Exec sp_rename 'table_name.old_column_name','new_column_name' <<-- to change the column's name
+Exec sp_rename 'table_name', 'new_table_name' <<-- to change the table's name
+
+difference between (AND,OR)
+
+window function :- is the powerful feature defined by over clouse that allow you to perform the calculation on the scenario based stuations.
+
+ROW_NUMBER(): Assigns a unique number to each row within the partition.
+RANK(): Assigns a unique rank to each row within the partition, Rows with equal values receive the same rank, and the next rank is skipped.
+DENSE_RANK(): Assigns a unique rank to each row within the partition, Rows with equal values receive the same rank, and the next rank is not skipped.
+NTILE(): divide the data into smaller buckets as you define, this is as same as percentile, decile and quartile in statistics.
+LEAD()
+LAG()
+
+Cummulative sales -->> select *, sum(sales)over (order by id) from table_name <<-- entire cummulative sales
+Cummulative sales -->> select *, sum(sales) over (partition by customer,order by id) from table_name <<-- per customer cummulative sales
+__________________________________________________________________________
+
+In SQL Server, a nested query (also known as a subquery) is a query that is embedded within another query.
+that allows you to not create the temp table and use the subqueries -->>> first nested query is executed then outer query is executed
+__________________________________________________________________________
+
+Lead, Lag, partition by, Ntile
+
+
+
+_________________
+Start Schema --->>> here we need two tables fact table and dimension table (only one fact table)
+
+Dimension table -->> master information -->> contains the information(product, people, name, age, places) which does not change frequently and contain key (common identifier used to join two or more tables)
+Dimension table -->> has the descriptive attributes (name, age, place, city etc.) <<-- dimension tables are not normalized 
+
+Fact table -->> the information on which we can do some calculations (sales, profit etc.) <<-- fact tables are not normalized
+Fact table -->> attributes comparatively dimension table, is table is created after dimension table
+**on to many relationships -->> fact table has multiple information so it contains foreign key and dimension table(unique values) has primary key**
+
+
+Snowflake Schema --->>> this is also the star schema where dimension tables are normalized to manage the size of dimension tables
+			only one fact table but we derive multiple dimension tables from one dimension table to normalize the dimension table
+
+
+*******************************************************
+Data cleaning, is the process to improve data quality and ensure that the dataset is accurate, complete, and reliable for further analysis.
+how it can be done, we have different methods to perform this activity
+
+Handling missing values:
+1. Removing duplicates:
+2. correcting data types, remvoing null or blank values, if we have leading and trainling spaces or any kind of punctuations then that it should be removed
+3. using the statistical algorithms to identify the outliers which can lead the dataset differently from the normal dataset pattern
+
+
+
+Data Processing:
+1. Data processing involves transforming and manipulating the cleaned data to extract meaningful insights or prepare it for analysis.
+2. Data integration: Combining data from multiple sources or datasets to create a unified dataset for analysis.
+3. Data transformation: Applying mathematical operations, aggregations, or statistical calculations to derive new variables or features from existing data.
+4. Data normalization: Scaling or standardizing variables to bring them into a common range or distribution.
+
+*****************************
+View -->> View is a virtual table in sql, derived from a sql query used for security purposes, improve the performance, is used for modification.
+
+stored procedure -->> is a collection of SQL statements,stored in the database, reduce the repeatetive work,
+		      main use -->> Parameterization, multiple activity at once, data transformation, complex logics
+
+
+

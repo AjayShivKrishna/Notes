@@ -1,0 +1,171 @@
+Power BI -->> is the business Intelligence tool which will help you to analyze your data, clean you data and convert that data into visual format where you can create
+	      different reports and dashboards.
+Power Query -->> is a ETL tool (this is data Transform option)
+Power Pivot -->> is used for data modeling when you have multiple data sourse and you want connect them create relationships between them.
+Power BI Service -->> is a service to communicate with your users that what are the reports, basically it provide you the functionality to share your 
+		      reports dashboard with you clients
+________________________
+Include -->>
+Exclude -->>
+How to view data from a graph -->> just right click on the visual then select the option "show data points as a table"
+how to export data in the excel file -->> on the dashboard -->> at top right click on three dotes then select export data.
+________________________
+change the data type without going to transform option -->> click on any column then at top you will see data category drop down option then just select the appropriate data type.
+tooltips -->> is the option where you drog and drop all th column, when you drop any field into tooltips option then it won't be seen until or unless you move you cursor on the vidual
+______________________________________
+Power BI -->> is the Powerfull Business intelligence tool representade by Microsoft, that help organizations to connect it with different data sources, 
+further Analyze,transform and model their data and create interactive reports and dashboards that can help in decision making.
+
+Power BI Desktop: this is a Windows application used to create and publish reports and visualizations. Power BI Desktop provides tools for data modeling, transformation, and creating 
+interactive visualizations.
+
+Power BI Service (Power BI online): this is a cloud-based service where reports and dashboards are shared or published from Power BI Desktop.
+
+Power BI Mobile: this is a mobile application available. Power BI Mobile allows users to access their reports and dashboards on the go, enabling them to stay connected and make data-driven
+decisions from anywhere.
+
+Power Query: this is a data preparation and transformation tool within Power BI that allows users to connect to various data sources, extract and clean the data, and shape it for 
+analysis and visualization.
+
+Power Pivot: this is a data modeling component in Power BI that helps users create relationships between tables, define calculated columns and measures, and build complex data models for 
+advanced analysis.
+
+Power View: this is a data visualization tool that allows users to create interactive and visually appealing reports and dashboards using drag-and-drop functionality. Power View supports 
+a variety of visualizations like charts, maps, tables, and slicers.
+______________________________________
+Here are some best practices for optimizing data models in Power BI: 
+
+Simplify and normalize data: Cleanse and transform data before importing it into Power BI. Remove unnecessary columns and tables, and normalize 
+the data model by breaking it into smaller, related tables. This improves data clarity and reduces redundancy.
+Use relationships effectively: Establish relationships between tables using appropriate columns. Avoid creating unnecessary or circular relationships.
+Manage data granularity: Determine the appropriate level of granularity for your data model. Consider aggregating data at higher levels when dealing with 
+large datasets to improve performance. Use calculated tables or pre-aggregated tables for frequently used aggregations.
+Optimize data types and formatting: Choose the most suitable data types for columns in your tables. Avoid using text data type for numeric values whenever possible. Format columns correctly to avoid unnecessary data type conversions during calculations.
+Optimize visuals and report design: Minimize the number of visuals on a page and use appropriate visual types. Avoid using complex visuals that can slow down rendering and interactivity.
+______________________________________
+
+DAX (Data Analysis Expressions) is the formula languadge in power bi which is used for data modelig and it is allowing users to create complex aggregations,
+calculations and measures.
+
+SUM: Calculates the sum of a column or expression in a table.
+Example: Total Sales = SUM(Sales[Amount])
+
+AVERAGE: Calculates the average of a column or expression in a table.
+Example: Average Price = AVERAGE(Products[Price])
+
+COUNT: Counts the number of rows in a table or column.
+Example: Number of Customers = COUNT(Customer[CustomerID])
+
+MAX/MIN: Returns the maximum or minimum value in a column or expression.
+Example: Highest Sales = MAX(Sales[Amount])
+
+DISTINCTCOUNT: Calculates the count of distinct values in a column or expression.
+Example: Number of Products Sold = DISTINCTCOUNT(Sales[ProductID])
+
+CALCULATE: Modifies the context in which a calculation is performed.
+Example: Total Sales in 2022 = CALCULATE(SUM(Sales[Amount]), Sales[Year] = 2022)
+
+FILTER: Returns a table that is filtered based on a specified condition.
+Example: High Revenue Products = FILTER(Products, Products[Revenue] > 100000)
+
+RELATED: Retrieves a value from a related table based on a relationship.
+Example: Product Category = RELATED(Products[Category])
+
+IF: Performs conditional calculations based on a specified condition.
+Example: Discounted Price = IF(Sales[Quantity] > 10, Sales[UnitPrice] * 0.9, Sales[UnitPrice])
+
+RANKX: Assigns a rank to each row in a table based on a specified expression.
+Example: Sales Rank = RANKX(Sales, Sales[Amount])
+
+Data Security and access control:- Row-level security (RLS) in Power BI is a feature that allows you to control access to data at 
+the row level based on user roles and filters. It enables you to restrict what data individual users can see within a dataset or table.
+In simple terms, RLS helps you ensure that each user can only view the specific rows of data that they are authorized to see.
+
+Power BI Getaway:- Getaway is a service or a tool that builds the connection between Power BI service(online) and Power BI desktop(or data),Oracle, SQL or anything ( connection from the data source)
+		   Getaway helps to refresh the data automatically by schduling it on Getaway, or you can refresh it manually too.
+
+
+Data view: You can see the individual rows and columns of your data in a tabular format. You have the ability to add, edit, or delete data directly in the Data view.
+can Create Calculated Columns.
+Apply Data Transformations: Power BI's Query Editor is accessible within the Data view, allowing you to apply various data transformations. 
+You can perform tasks like filtering, sorting, grouping, removing duplicates, and merging data from multiple sources.
+Set Data Types and Formatting.
+
+Data Model: data Model gives you the functionality through which you can import the data from multiple data sources like oracle, sql, csv, online etc. 
+it treats all the tables as one format so that you can create the relationships among them in order to help in creating the interactive reports and dashboards
+________________________________________________
+Visual -->> visual is the single graph over one sheet
+Dashboard -->> is the group of multiple graphs
+________________________________________________
+Types of Variables :-
+
+1. Categorical 
+there are two types of Categorical variable
+A. Ordinal -->> Order is there in the values Ex. Shirt Size, Shoe Size, Temperature
+B. Nominal -->> There is no order Ex. Pincode, Product Name, Customer Name
+2. Continuous -->> (Always Numerical) -->> Ex. Salary, Profit, Sales
+
+1. Bar Chart:-
+A. Vertical -->> X axis variable is Nominal
+B. Horizontal -->> X axis variable is Ordinal
+C. Stacked column -->> Legend should have 5 or less unique values(if more, then we try to create separate charts)
+D. 100% Stacked column chart -->> Legend should have 5 or less unique values(if more, then we try to create separate charts)
+____________________
+2. Line Chart
+A. Normal Line Chart -->> used for trends (Time Series)
+B. Area line Chart -->> it shows the area of density of the chart
+____________________
+3. Pie Chart -->> Similar to 100% Bar chart, it's just that the category's value are represented by angle 
+		 your category or legend should not be more than 5 and Nominal data category is used in this.
+4. Donut Chart -->> Similar to Pie Chart. however, you can represent the total amount in between.
+5. Scattered Chart -->> Used to identify the Outliers and Density of population.
+6. Bubble Chart -->> in Scattered chart you prepare the bubble chart.
+___________________
+How to add up and down arrow -->> https://www.youtube.com/watch?v=gLSiQp4tZaA
+
+Play Axis -->> drop here year, month or day to see a running changes in the trend. and also the moment you click on any data point you will get the line
+		showing trend.
+Edit interaction -->> to control movement of each visual clicking on one 
+		      visual should move desired visuals -->> select any visual go to format then click on **EDIT ITERACTION**.
+
+Filter Pane -->> gives you the functionality to apply filter on the selected visuals -->> such as top 10 customer, only 2022 and 2023's data etc.
+_________________
+
+Merge Queries -->> used for joining the tables
+1. select first table and then second table and then click on the same columns in both the tables. furthen in the below option you can select the join type.
+
+Fuzzy Match -->> is the type of join where two or more tables are joined evenif having the same key -->> for instance if I am join on name column and in 
+		first table I have Ajay and in second table I have Ajaysh then it will match the tables without having the common key (in industries we avoid to use these)
+
+Append Queries -->>
+
+
+NEW_MEASURE --->>> ONLY ONE VALUE WILL BE REPRESENTED IF THIS IS NOT USED WITH ANY OTHER VARIABLE HOWEVER IN NEW COLUMN THE VALUES CAN BE SEEN IN EACH ROWS <<<--- this is the difference
+
+New column -->> to create a new calculated column -->> column_name = calculate (sum(table[profit]), table[category] = "Consumer")
+		this can also be done using filter pane and filtering the same condition as above
+Calculate -->> is a DAX function which is used when we want to do some calculation after filtering any purticular value as above
+
+---------------
+column_sales = IF(Sheet1[Category] = "Furniture", Sheet1[Sales]*0.10,Sheet1[Sales])
+AND/OR -->> AND(10>9,9>10) <<------- this will give you true in output
+
+--------->>>>> IF(AND(10>9,9>10),"true",false) <<<-------- this condition work like --->>> IF(AND(10>9,9>10) then "true" else false)
+--------->>>>> column_name = calculate (sum(table[profit]), table[category] in {"Furniture","Technology"})
+--------->>>>> column_sales = CONCATENATE(Sheet1[Category],CONCATENATE("___",Sheet1[Ship Date]))
+--------->>>>> UPPER(Sheet1[Category])		//////   	Lower(Sheet1[Category])
+--------->>>>> Year(Sheet1[Date]) /////				 Today()
+--------->>>>> ENDOFMONTH(Sheet1[Date])  	//////   	AVERAGE(Sheet1[sales])		///// count(Sheet1[sales])
+
+
+Insert ---->>> shapes ---->>> select any shape and then put the visuals you want and then go to the format and select send backward 
+				option and then select send to back option like a contener in tableau 
+
+go to view --->> select lock objects option so that no one can move the visuals from their positions.
+
+
+
+
+
+
+
